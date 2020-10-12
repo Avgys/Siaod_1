@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.063,C:\Users\ilyuh\Documents\Embarcadero\Studio\Projects\Project1.cbproj=C:\Users\ilyuh\Documents\Embarcadero\Studio\Projects\Siaod3\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.568,C:\Users\ilyuh\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\ilyuh\Documents\Embarcadero\Studio\Projects\Siaod3\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.510,=C:\Users\ilyuh\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.055,C:\Users\ilyuh\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Users\ilyuh\Documents\Embarcadero\Studio\Projects\Siaod3\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.577,C:\Users\ilyuh\Documents\Embarcadero\Studio\Projects\Siaod3\Project1.cbproj=D:\C++Tasks\Siaod3\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.020,=C:\Users\ilyuh\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.568,C:\Users\ilyuh\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\ilyuh\Documents\Embarcadero\Studio\Projects\Siaod3\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.568,C:\Users\ilyuh\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\ilyuh\Documents\Embarcadero\Studio\Projects\Siaod3\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
