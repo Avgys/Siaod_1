@@ -1,8 +1,8 @@
 object Form1: TForm1
-  Left = 0
-  Top = 0
+  Left = 140
+  Top = 145
   Caption = 'Form1'
-  ClientHeight = 662
+  ClientHeight = 509
   ClientWidth = 567
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -12,19 +12,17 @@ object Form1: TForm1
   Font.Style = []
   Menu = MainMenu1
   OldCreateOrder = False
+  Position = poDesigned
   PixelsPerInch = 96
   TextHeight = 13
   object Panel2: TPanel
     Left = 408
     Top = 0
     Width = 159
-    Height = 662
+    Height = 509
     Align = alRight
     Caption = 'Panel2'
     TabOrder = 0
-    ExplicitLeft = 25
-    ExplicitTop = 1
-    ExplicitHeight = 39
     object Button3: TButton
       Left = 16
       Top = 65
@@ -49,21 +47,26 @@ object Form1: TForm1
       Height = 25
       Caption = 'AddToList'
       TabOrder = 2
-      OnClick = Button1Click
+      OnClick = Addbtn
+    end
+    object Button4: TButton
+      Left = 16
+      Top = 176
+      Width = 75
+      Height = 25
+      Caption = 'Refresh'
+      TabOrder = 3
+      OnClick = Refresh
     end
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
     Width = 408
-    Height = 662
+    Height = 509
     Align = alClient
     Caption = 'Panel3'
     TabOrder = 1
-    ExplicitLeft = 200
-    ExplicitTop = 317
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object Panel1: TPanel
       Left = 1
       Top = 1
@@ -71,9 +74,6 @@ object Form1: TForm1
       Height = 152
       Align = alTop
       TabOrder = 0
-      ExplicitLeft = -4
-      ExplicitTop = 249
-      ExplicitWidth = 411
       object Label1: TLabel
         Left = 55
         Top = 40
@@ -102,29 +102,39 @@ object Form1: TForm1
         Height = 21
         TabOrder = 1
       end
+      object Viewbox: TComboBox
+        Left = 185
+        Top = 116
+        Width = 121
+        Height = 21
+        ItemIndex = 1
+        TabOrder = 2
+        Text = 'Nominal'
+        Items.Strings = (
+          'Hash view'
+          'Nominal'
+          'Alphabet sort'
+          'Page Sort')
+      end
     end
-    object StringGrid: TStringGrid
+    object Memo: TMemo
       Left = 1
       Top = 153
       Width = 406
-      Height = 508
+      Height = 355
       Align = alClient
-      ColCount = 3
-      DefaultColWidth = 133
-      FixedCols = 0
-      RowCount = 20
-      FixedRows = 0
       PopupMenu = PopupMenu1
       TabOrder = 1
     end
   end
   object MainMenu1: TMainMenu
-    Left = 360
-    Top = 65528
+    Left = 488
+    Top = 8
     object N1: TMenuItem
       Caption = 'Prog'
       object LoadFromFile1: TMenuItem
         Caption = 'LoadFromFile'
+        OnClick = LoadFromFile
       end
       object Exit1: TMenuItem
         Caption = 'Exit'
@@ -133,10 +143,23 @@ object Form1: TForm1
     end
   end
   object PopupMenu1: TPopupMenu
-    OnPopup = Button1Click
-    Left = 320
+    OnPopup = Addbtn
+    Left = 536
+    Top = 8
     object dsaf1: TMenuItem
       Caption = 'Change'
     end
+  end
+  object OpenTextFileDialog1: TOpenTextFileDialog
+    FileName = 'D:\Project_cpp\Siaod3\Unit1.h'
+    FilterIndex = 0
+    Encodings.Strings = (
+      'ANSI'
+      'ASCII'
+      'Unicode'
+      'Big Endian Unicode'
+      'UTF-8'
+      '')
+    Left = 408
   end
 end
