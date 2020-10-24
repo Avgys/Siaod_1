@@ -9,29 +9,31 @@
 
 #pragma package(smart_init)
 
-unsigned int GetKey(UnicodeString word)
+unsigned int HashTable::GetKey(UnicodeString word)
 {
 	int sum = 0;
 	for (int i = 1; i <= word.Length(); i++) {
 	  sum += word[i];
 	}
-	return sum % 20;
+	return sum % SIZE;
 }
 
-TItem* _fastcall HashTable::AddItem(UnicodeString newtermin, unsigned int newpage){
-   TItem *temp ;
+TItem* _fastcall HashTable::AddItem(TItem *Prev,UnicodeString newtermin, unsigned int newpage){
+   TItem *temp;
+   if (Prev==NULL) {
    unsigned key = GetKey(newtermin);
-   if (list[key]->Next == NULL){
-   list[key] = new TItem ;
    temp = list[key];
-   }
-	else
-   {
-	temp = list[key];
-	while (temp->Next == NULL){
-	 temp = temp->Next;
-	}
-   }
+	   if (temp != NULL) {
+		   while(temp->Next != NULL){
+		   temp = temp->Next;
+		   }
+	   temp->Next = new TItem;
+	   temp= temp->Next;
+	   }
+	   else {
+	   temp= new TItem;
+	   list[key]=temp;
+	   }
    temp->Page  = new Tpg;
    temp->Termin = newtermin;
    temp->Page->Page = newpage;
@@ -39,4 +41,5 @@ TItem* _fastcall HashTable::AddItem(UnicodeString newtermin, unsigned int newpag
    temp->Next = NULL;
    temp->Page->Above = temp;
    return temp;
+   }
 }
