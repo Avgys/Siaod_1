@@ -5,11 +5,12 @@
 //---------------------------------------------------------------------------
 #endif
 #include <ustring.h>
+#include <vector>
 #define SIZE 20
 
  class   Tpg{
  public:
- unsigned int Page;
+ int Page;
  struct Tpg *Next;
  struct TItem *Above;
  };
@@ -31,5 +32,8 @@ unsigned int GetKey(UnicodeString word);
 //void FindItem();
 TItem* __fastcall AddItem(TItem *Prev, UnicodeString newtermin, unsigned int newpage);
 void __fastcall DisplayList(UnicodeString newtermin, unsigned int newpage,unsigned int key);
-void __fastcall LoadFromFile1Click(TObject *Sender);
+std::vector <TItem*>  LinkAll(TItem* Head = NULL);
+std::vector <TItem*>  SortAllName();
+std::vector <TItem*>  SortAllPage();
+TItem* FindTermin();
 };

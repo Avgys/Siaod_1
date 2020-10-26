@@ -21,42 +21,36 @@ object Form1: TForm1
     Width = 159
     Height = 509
     Align = alRight
-    Caption = 'Panel2'
     TabOrder = 0
-    object Button3: TButton
-      Left = 16
-      Top = 65
-      Width = 75
-      Height = 25
-      Caption = 'SortPage'
-      PopupMenu = PopupMenu1
-      TabOrder = 0
-    end
-    object Button2: TButton
-      Left = 16
-      Top = 96
-      Width = 75
-      Height = 25
-      Caption = 'SortName'
-      TabOrder = 1
-    end
-    object Button1: TButton
-      Left = 16
-      Top = 127
-      Width = 75
-      Height = 25
-      Caption = 'AddToList'
-      TabOrder = 2
-      OnClick = Addbtn
-    end
     object Button4: TButton
-      Left = 16
-      Top = 176
+      Left = 6
+      Top = 227
       Width = 75
       Height = 25
       Caption = 'Refresh'
-      TabOrder = 3
+      TabOrder = 0
       OnClick = Refresh
+    end
+    object Button5: TButton
+      Left = 6
+      Top = 196
+      Width = 75
+      Height = 25
+      Caption = 'ViewHash'
+      TabOrder = 1
+      OnClick = View
+    end
+    object Viewbox: TComboBox
+      Left = 6
+      Top = 153
+      Width = 121
+      Height = 21
+      TabOrder = 2
+      Text = 'Alphabet Sort'
+      Items.Strings = (
+        'Hash View'
+        'Alphabet Sort'
+        'Page Sort')
     end
   end
   object Panel3: TPanel
@@ -75,46 +69,64 @@ object Form1: TForm1
       Align = alTop
       TabOrder = 0
       object Label1: TLabel
-        Left = 55
-        Top = 40
+        Left = 25
+        Top = 16
         Width = 32
         Height = 13
         Caption = 'Termin'
       end
       object Label2: TLabel
-        Left = 208
-        Top = 32
+        Left = 25
+        Top = 62
         Width = 24
         Height = 13
         Caption = 'Page'
       end
+      object Label3: TLabel
+        Left = 226
+        Top = 38
+        Width = 20
+        Height = 13
+        Caption = 'Find'
+      end
       object Termin: TEdit
         Left = 25
-        Top = 66
+        Top = 35
         Width = 121
         Height = 21
         TabOrder = 0
       end
       object Page: TEdit
-        Left = 185
-        Top = 66
+        Left = 25
+        Top = 81
         Width = 121
         Height = 21
         TabOrder = 1
       end
-      object Viewbox: TComboBox
-        Left = 185
-        Top = 116
-        Width = 121
+      object FindTermin: TEdit
+        Left = 226
+        Top = 57
+        Width = 175
         Height = 21
-        ItemIndex = 1
         TabOrder = 2
-        Text = 'Nominal'
-        Items.Strings = (
-          'Hash view'
-          'Nominal'
-          'Alphabet sort'
-          'Page Sort')
+      end
+      object Button1: TButton
+        Left = 248
+        Top = 90
+        Width = 153
+        Height = 25
+        Caption = 'FindTermin by Sub'
+        TabOrder = 3
+        OnClick = FindTerm
+      end
+      object Button2: TButton
+        Left = 248
+        Top = 121
+        Width = 153
+        Height = 25
+        Caption = 'FindSub by Termin'
+        TabOrder = 4
+        OnClick = FindSub
       end
     end
     object Memo: TMemo
@@ -128,8 +140,7 @@ object Form1: TForm1
     end
   end
   object MainMenu1: TMainMenu
-    Left = 488
-    Top = 8
+    Left = 440
     object N1: TMenuItem
       Caption = 'Prog'
       object LoadFromFile1: TMenuItem
@@ -144,8 +155,7 @@ object Form1: TForm1
   end
   object PopupMenu1: TPopupMenu
     OnPopup = Addbtn
-    Left = 536
-    Top = 8
+    Left = 472
     object dsaf1: TMenuItem
       Caption = 'Change'
     end

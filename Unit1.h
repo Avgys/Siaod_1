@@ -23,14 +23,11 @@
 class TForm1 : public TForm
 {
 __published:	// IDE-managed Components
-	TButton *Button1;
 	TMainMenu *MainMenu1;
 	TEdit *Termin;
 	TEdit *Page;
 	TMenuItem *N1;
 	TMenuItem *Exit1;
-	TButton *Button2;
-	TButton *Button3;
 	TPopupMenu *PopupMenu1;
 	TMenuItem *dsaf1;
 	TPanel *Panel1;
@@ -43,10 +40,18 @@ __published:	// IDE-managed Components
 	TOpenTextFileDialog *OpenTextFileDialog1;
 	TButton *Button4;
 	TMenuItem *LoadFromFile1;
+	TButton *Button5;
+	TEdit *FindTermin;
+	TLabel *Label3;
+	TButton *Button1;
+	TButton *Button2;
 	void __fastcall Exit1Click(TObject *Sender);
 	void __fastcall Addbtn(TObject *Sender);
 	void __fastcall LoadFromFile(TObject *Sender);
 	void __fastcall Refresh(TObject *Sender);
+	void __fastcall View(TObject *Sender);
+	void __fastcall FindSub(TObject *Sender);
+	void __fastcall FindTerm(TObject *Sender);
 private:	// User declarations
 public:     // User declarations
 //TItem* __fastcall AddItem(UnicodeString newtermin, unsigned int newpage);
